@@ -4,8 +4,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    compileSdkVersion 34
 
     defaultConfig {
         applicationId "co.tiagoaguiar.course.instagram"
@@ -32,7 +31,9 @@ android {
     }
 
     buildFeatures { viewBinding = true }
+    namespace 'co.tiagoaguiar.course.instagram'
 }
+
 
 dependencies {
 
