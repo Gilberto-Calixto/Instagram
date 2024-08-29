@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Instagram</string>
+    <string name="login_emai_acess">E-mail</string>
+    <string name="login_password_acess">Senha</string>
+    <string name="enter_app">Entrar</string>
+    <string name="or">ou</string>
+    <string name="cadaster_user">Não tem uma conta? Cadastre-se</string>
 </resources>
