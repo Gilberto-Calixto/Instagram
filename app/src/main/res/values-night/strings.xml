@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="register_email">Digite seu Email</string>
+    <string name="cadaster_password">Senha</string>
+    <string name="cadaster_password_confirm">Comfirmar senha</string>
+</resources>

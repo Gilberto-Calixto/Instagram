@@ -1,4 +1,4 @@
-package co.tiagoaguiar.course.instagram
+package co.tiagoaguiar.course.instagram.view.view.login
 
 import android.os.Bundle
 import android.os.Handler
@@ -8,7 +8,7 @@ import android.text.TextWatcher
 import androidx.appcompat.app.AppCompatActivity
 import co.tiagoaguiar.course.instagram.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
