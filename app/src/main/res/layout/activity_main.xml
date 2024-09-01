@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".view.view.login.LoginActivity">
 
 
     <ScrollView
@@ -26,6 +26,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.3">
+
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -48,7 +49,7 @@
                 android:hint="@string/login_password_acess"
                 android:inputType="textPassword" />
 
-            <co.tiagoaguiar.course.instagram.LoadingButton
+            <co.tiagoaguiar.course.instagram.view.view.login.LoadingButton
                 android:id="@+id/login_btn_enter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

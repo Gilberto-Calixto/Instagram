@@ -9,6 +9,7 @@
     <style name="Theme.Instagram.FormEditText" parent="Theme.Instagram.FormContainer">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
         <item name="android:padding">16dp</item>
         <item name="android:layout_marginBottom">24dp</item>
         <!-- Adicionando bordas -->
@@ -30,6 +31,25 @@
 
         <!-- Pintar cor do botão  -->
         <item name="android:backgroundTint">@color/button_background</item>
+    </style>
+
+
+    <style name="Theme.Instagram.TextViewBase" parent="Theme.Instagram.FormContainer">
+        <item name="textOutlineColor">@color/gray_text</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+    <style name="Theme.Instagram.TextViewBase.From">
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginBottom">24dp</item>
+    </style>
+
+    <style name="Theme.Instagram.Link" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/blue_enabled</item>
     </style>
 
 </resources>
