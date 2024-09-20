@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/post_list"
+        android:icon="@drawable/ic_insta_listed"
+        android:title="@string/username"/>
+
+    <item
+        android:id="@+id/post_grid"
+        android:icon="@drawable/ic_insta_grid"
+        android:title="@string/username"/>
+
+    <item
+        android:id="@+id/post_mark"
+        android:icon="@drawable/ic_more"
+        android:title="@string/username"/>
+
+</menu>

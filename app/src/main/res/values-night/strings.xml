@@ -3,4 +3,9 @@
     <string name="register_email">Digite seu Email</string>
     <string name="cadaster_password">Senha</string>
     <string name="cadaster_password_confirm">Comfirmar senha</string>
+    <string name="profile_text_count">0</string>
+    <string name="profile_count_flowers">0</string>
+    <string name="profile_text_plublictons">Publicações</string>
+    <string name="profile_text_flowers">Seguidores</string>
+    <string name="profile_text_flowing">Seguindo</string>
 </resources>

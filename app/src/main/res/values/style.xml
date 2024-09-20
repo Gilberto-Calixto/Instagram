@@ -52,4 +52,11 @@
         <item name="android:textColor">@color/blue_enabled</item>
     </style>
 
+    <!-- TextView da tela de usuário -->
+    <style name="Theme.Instagram.Profile_TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
 </resources>

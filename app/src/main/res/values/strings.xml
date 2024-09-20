@@ -52,4 +52,9 @@
     <string name="logout_action">Sair</string>
     <string name="cancel">Cancel</string>
     <string name="dialog_title">Definir uma foto de perfil</string>
+    <string name="profile_text_count">0</string>
+    <string name="profile_count_flowers">0</string>
+    <string name="profile_text_plublictons">Publicações</string>
+    <string name="profile_text_flowers">Seguidores</string>
+    <string name="profile_text_flowing">Seguindo</string>
 </resources>
