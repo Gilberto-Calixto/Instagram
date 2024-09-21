@@ -7,6 +7,7 @@ import android.view.WindowInsetsController
 import androidx.activity.enableEdgeToEdge
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -33,5 +34,14 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right,0)
             insets
         }
+
+        val toolbarProfile = findViewById<Toolbar>(R.id.toolbar_profile)
+        setSupportActionBar(toolbarProfile)
+
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_insta_camera) //Exibir imagem na toolbar
+        supportActionBar?.setDisplayHomeAsUpEnabled(true) // Tornar itens clicáveis
+        supportActionBar?.title = "" // Tirando o titulo padrão
+
+
     }
 }

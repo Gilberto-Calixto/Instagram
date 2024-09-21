@@ -2,6 +2,8 @@ package co.tiagoaguiar.course.instagram.view.view.profile
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -15,6 +17,16 @@ import co.tiagoaguiar.course.instagram.databinding.FragmentProfileBinding
 class FragmentProfile: Fragment() {
 
     private lateinit var binding: FragmentProfileBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.profile_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
