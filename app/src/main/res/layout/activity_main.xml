@@ -39,7 +39,7 @@
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             tools:layout="@layout/fragment_profile"
-            android:name="co.tiagoaguiar.course.instagram.view.view.profile.FragmentProfile"
+            android:name="co.tiagoaguiar.course.instagram.view.view.home.HomeFragment"
             />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
