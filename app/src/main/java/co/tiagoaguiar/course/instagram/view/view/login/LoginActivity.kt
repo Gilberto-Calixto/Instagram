@@ -8,8 +8,10 @@ import android.text.TextWatcher
 import androidx.appcompat.app.AppCompatActivity
 import co.tiagoaguiar.course.instagram.databinding.ActivityLoginBinding
 import co.tiagoaguiar.course.instagram.databinding.ActivityMainBinding
+import co.tiagoaguiar.course.instagram.view.common.TxtWatch
+import co.tiagoaguiar.course.instagram.view.view.Login
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity(), Login.View {
 
     private lateinit var binding: ActivityLoginBinding
 
@@ -26,29 +28,33 @@ class LoginActivity : AppCompatActivity() {
 
         val btnEnter: LoadingButton = binding.loginBtnEnter
         btnEnter.setOnClickListener {
-            btnEnter.showProgress(true)
-
-
-            email.error = "E-mail inválido"
-            password.error = "Senha inválida"
-
-            Handler(Looper.getMainLooper()).postDelayed({
-                btnEnter.showProgress(false)
-            }, 2000)
+            //Chamar o presenter
         }
 
     }
 
-    private val watcher = object: TextWatcher{
-        override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-        }
-
-        override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-            binding.loginBtnEnter.isEnabled = p0.toString().isNotEmpty()
-        }
-
-        override fun afterTextChanged(p0: Editable?) {
-        }
-
+    private val watcher = TxtWatch {
+        binding.loginBtnEnter.isEnabled = it.isNotEmpty()
     }
+
+    override fun showProgress(enabled: Boolean) {
+        binding.loginBtnEnter.showProgress(enabled)
+    }
+
+    override fun displayEmailFailure(emailError: Int?) {
+        binding.loginTextEmail.error = emailError?.let { getString(it) }
+    }
+
+    override fun displayPasswordFailure(passwordError: Int?) {
+        binding.loginTextPassword.error = passwordError?.let { getString(it) }
+    }
+
+    override fun onUserAuthenticated() {
+        //Ir para a tela principal
+    }
+
+    override fun onUserUnauthorized() {
+        //Mostrar um Alerta
+    }
+
 }

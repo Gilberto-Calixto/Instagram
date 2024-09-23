@@ -25,13 +25,16 @@ class LoadingButton : FrameLayout {
         setup(context, attrs)
     }
 
+    //Infla o layout customizado
     private fun setup(context: Context, attrs: AttributeSet?) {
         val inflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         inflater.inflate(R.layout.button_loading, this)
 
+        //Cria um atributo customizado
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.LoadingButton, 0, 0)
         text = typedArray.getString(R.styleable.LoadingButton_text)
 
+        // Pegando os item(filhos) do container Pai
         button = getChildAt(0) as Button
         progress = getChildAt(1) as ProgressBar
 
