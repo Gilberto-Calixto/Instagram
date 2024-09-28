@@ -1,11 +1,17 @@
 package co.tiagoaguiar.course.instagram.view.view.login
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import co.tiagoaguiar.course.instagram.databinding.ActivityLoginBinding
 import co.tiagoaguiar.course.instagram.view.common.TxtWatch
 import co.tiagoaguiar.course.instagram.view.Login
+import co.tiagoaguiar.course.instagram.view.data.login.FakeDataSource
+import co.tiagoaguiar.course.instagram.view.data.login.LoginDataSource
+import co.tiagoaguiar.course.instagram.view.data.login.LoginRepository
 import co.tiagoaguiar.course.instagram.view.presentation.login.LoginPresenter
+import co.tiagoaguiar.course.instagram.view.view.main.MainActivity
 
 class LoginActivity : AppCompatActivity(), Login.View {
 
@@ -17,7 +23,8 @@ class LoginActivity : AppCompatActivity(), Login.View {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        presenter = LoginPresenter(this)
+        val repository = LoginRepository(FakeDataSource())
+        presenter = LoginPresenter(this, repository)
 
         val email = binding.loginTextEmail
         val password = binding.loginTextPassword
@@ -36,7 +43,7 @@ class LoginActivity : AppCompatActivity(), Login.View {
         btnEnter.setOnClickListener {
 
             //Chamar o presenter
-            presenter.login(email.toString(), password.toString())
+            presenter.login(email.text.toString(), password.text.toString())
         }
 
     }
@@ -65,11 +72,16 @@ class LoginActivity : AppCompatActivity(), Login.View {
 
     override fun onUserAuthenticated() {
         //Ir para a tela principal
+        val intent = Intent(this,MainActivity::class.java)
+        //Garantem que a nova Activity será a única na pilha, removendo qualquer histórico anterior.
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(intent)
 
     }
 
-    override fun onUserUnauthorized() {
+    override fun onUserUnauthorized(message: String) {
         //Mostrar um Alerta
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
 }
