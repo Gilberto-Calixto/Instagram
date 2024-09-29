@@ -6,9 +6,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import co.tiagoaguiar.course.instagram.databinding.ActivityLoginBinding
 import co.tiagoaguiar.course.instagram.view.common.TxtWatch
-import co.tiagoaguiar.course.instagram.view.Login
+import co.tiagoaguiar.course.instagram.view.cases.Login
+import co.tiagoaguiar.course.instagram.view.common.DependencyInjector
 import co.tiagoaguiar.course.instagram.view.data.login.FakeDataSource
-import co.tiagoaguiar.course.instagram.view.data.login.LoginDataSource
 import co.tiagoaguiar.course.instagram.view.data.login.LoginRepository
 import co.tiagoaguiar.course.instagram.view.presentation.login.LoginPresenter
 import co.tiagoaguiar.course.instagram.view.view.main.MainActivity
@@ -23,8 +23,7 @@ class LoginActivity : AppCompatActivity(), Login.View {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val repository = LoginRepository(FakeDataSource())
-        presenter = LoginPresenter(this, repository)
+        presenter = LoginPresenter(this, DependencyInjector.loginRepository())
 
         val email = binding.loginTextEmail
         val password = binding.loginTextPassword

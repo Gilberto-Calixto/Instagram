@@ -2,10 +2,9 @@ package co.tiagoaguiar.course.instagram.view.presentation.login
 
 import android.util.Patterns
 import co.tiagoaguiar.course.instagram.R
-import co.tiagoaguiar.course.instagram.view.Login
+import co.tiagoaguiar.course.instagram.view.cases.Login
 import co.tiagoaguiar.course.instagram.view.data.login.LoginCallback
 import co.tiagoaguiar.course.instagram.view.data.login.LoginRepository
-import java.util.regex.Pattern
 
 class LoginPresenter(
     var view: Login.View?,

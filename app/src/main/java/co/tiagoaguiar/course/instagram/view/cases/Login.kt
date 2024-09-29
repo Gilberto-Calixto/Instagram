@@ -1,4 +1,4 @@
-package co.tiagoaguiar.course.instagram.view
+package co.tiagoaguiar.course.instagram.view.cases
 
 import co.tiagoaguiar.course.instagram.view.common.BasePresenter
 import co.tiagoaguiar.course.instagram.view.common.BaseView
