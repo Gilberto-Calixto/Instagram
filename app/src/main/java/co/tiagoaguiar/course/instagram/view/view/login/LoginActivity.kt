@@ -12,6 +12,7 @@ import co.tiagoaguiar.course.instagram.view.data.login.FakeDataSource
 import co.tiagoaguiar.course.instagram.view.data.login.LoginRepository
 import co.tiagoaguiar.course.instagram.view.presentation.login.LoginPresenter
 import co.tiagoaguiar.course.instagram.view.view.main.MainActivity
+import co.tiagoaguiar.course.instagram.view.view.register.RegisterActivity
 
 class LoginActivity : AppCompatActivity(), Login.View {
 
@@ -45,6 +46,16 @@ class LoginActivity : AppCompatActivity(), Login.View {
             presenter.login(email.text.toString(), password.text.toString())
         }
 
+        binding.texteCadastre.setOnClickListener {
+            goToRegister()
+        }
+
+    }
+
+    private fun goToRegister() {
+        val intent = Intent(this, RegisterActivity::class.java)
+
+        startActivity(intent)
     }
 
     override fun onDestroy() {

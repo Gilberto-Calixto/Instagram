@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".view.view.register.RegisterActivity">
 
-    <androidx.fragment.app.FragmentContainerView
+    <FrameLayout
         android:id="@+id/register_fragment"
         android:name="co.tiagoaguiar.course.instagram.view.view.register.RegisterPhotoFragment"
         android:layout_width="match_parent"
