@@ -5,9 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import co.tiagoaguiar.course.instagram.R
 import co.tiagoaguiar.course.instagram.databinding.FragmentRegisterPasswordBinding
 
-class RegisterPasswordFragment: Fragment() {
+class RegisterPasswordFragment: Fragment(R.layout.fragment_register_password) {
 
     private lateinit var binding: FragmentRegisterPasswordBinding
 
